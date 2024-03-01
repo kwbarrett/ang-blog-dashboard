@@ -49,6 +49,7 @@ export class CategoriesComponent implements OnInit {
           next: ( res ) => {
             console.log( res );
             this.submitted = true;
+            this.message = res.message ? res.message : 'This category was added successfully!';
             formData.reset();
             this.refreshList()
         },
@@ -82,7 +83,7 @@ export class CategoriesComponent implements OnInit {
           console.log(res);
           this.submitted = true;
           this.message = res.message ? res.message : 'This category was updated successfully!';
-          // this.refreshList()
+          this.refreshList()
         },
         error: (e) => console.error(e)
       });
