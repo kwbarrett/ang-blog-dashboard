@@ -44,7 +44,10 @@
               <tr *ngFor="let category of categories; let i = index">
                 <td> {{i+1}} </td>
                 <td> {{category.category}} </td>
-                <td> <button class="btn btn-sm btn-warning" (click)="onEdit(category.category, category.id)" >Edit</button> </td>
+                <td>
+                  <button class="btn btn-sm btn-warning" (click)="onEdit(category.category, category.id)" >Edit</button>
+                  <button class="btn btn-sm btn-warning ml-2" (click)="onDelete(category.id)" >Delete</button>
+                </td>
               </tr>
             </tbody>
           </table>
