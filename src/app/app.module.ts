@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AllPostComponent } from './posts/all-post/all-post.component';
 import { NewPostComponent } from './posts/new-post/new-post.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { NewPostComponent } from './posts/new-post/new-post.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
